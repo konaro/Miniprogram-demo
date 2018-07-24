@@ -1,21 +1,26 @@
-// pages/product/product-list.js
+// pages/product/product-info.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    products: [
-      { id: 1, name: 'Car', imgUrl: "https://images.pexels.com/photos/1200458/pexels-photo-1200458.jpeg?auto=compress&cs=tinysrgb&h=350", description: "A luxury car you won't miss it." },
-      { id: 2, name: 'Bike', imgUrl: "https://images.pexels.com/photos/1239460/pexels-photo-1239460.jpeg?auto=compress&cs=tinysrgb&h=350", description: "A durable bike you've never ride." }
-    ]
+    id: 0,
+    name: '',
+    imgUrl: '',
+    description: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({
+      id: +options.id,
+      name: options.name,
+      imgUrl: options.imgUrl,
+      description: options.description
+    })
   },
 
   /**
@@ -65,13 +70,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-
-  onProductTap: function (e) {
-    let product = e.currentTarget.dataset.product
-    
-    wx.navigateTo({
-      url: `product-info?id=${product.id}&name=${product.name}&description=${product.description}&imgUrl=${product.imgUrl}`
-    })
   }
 })

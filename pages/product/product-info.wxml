@@ -1,0 +1,12 @@
+<!--pages/product/product-info.wxml-->
+<view class="container">
+  <view>
+    {{name}}
+  </view>
+  <view>
+    <image mode="aspectFit" src="{{imgUrl}}"></image>
+  </view>
+  <view>
+    <text>{{description}}</text>
+  </view>
+</view>

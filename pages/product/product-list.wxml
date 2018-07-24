@@ -1,7 +1,7 @@
 <!--pages/product/product-list.wxml-->
 <view class="container">
   <view wx:for="{{products}}" wx:key="id">
-    <view class="product-container">
+    <view class="product-container" bindtap="onProductTap" data-product="{{item}}">
       <view class="product-title">
         <text>{{item.name}}</text>
       </view>
