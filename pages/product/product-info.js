@@ -69,7 +69,12 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    let product = this.data
+    return {
+      title: `商品資訊 - ${product.name}`,
+      path: `/pages/product/product-info?id=${product.id}&name=${product.name}&description=${product.description}&imgUrl=${product.imgUrl}`,
+      imageUrl: product.imgUrl
+    }
   },
 
   onViewDetail: function () {
