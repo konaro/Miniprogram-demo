@@ -1,26 +1,18 @@
-// pages/product/product-info.js
+// pages/web-view/web-view.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    id: 0,
-    name: '',
-    imgUrl: '',
-    description: ''
+    navigateTo: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      id: +options.id,
-      name: options.name,
-      imgUrl: options.imgUrl,
-      description: options.description
-    })
+    this.setData(options)
   },
 
   /**
@@ -70,12 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-
-  onViewDetail: function () {
-    let url = encodeURIComponent(`https://www.google.com/search?q=${this.data.name}`)
-    wx.navigateTo({
-      url: `../web-view/web-view?navigateTo=${url}`
-    })
   }
 })

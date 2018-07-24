@@ -9,4 +9,7 @@
   <view>
     <text>{{description}}</text>
   </view>
+  <view style="padding-top: 10px">
+    <button type="primary" bindtap="onViewDetail">Detail</button>
+  </view>
 </view>
