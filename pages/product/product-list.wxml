@@ -1,0 +1,16 @@
+<!--pages/product/product-list.wxml-->
+<view class="container">
+  <view wx:for="{{products}}" wx:key="id">
+    <view class="product-container">
+      <view class="product-title">
+        <text>{{item.name}}</text>
+      </view>
+      <view class="product-image">
+        <image mode="aspectFit" src="{{item.imgUrl}}" />
+      </view>
+      <view class="product-info">
+        <text>{{item.description}}</text>
+      </view>
+    </view>
+  </view>
+</view>
